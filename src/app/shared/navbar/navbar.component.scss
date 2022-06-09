@@ -1,0 +1,127 @@
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: -webkit-fill-available;
+
+    display: flex;
+    padding: 9px 6%;
+    justify-content: space-between;
+    align-items: center;
+
+    background: rgba(0, 0, 0, 0.52);
+    backdrop-filter: blur(4px);
+}
+.logo{
+    width: 40px;
+}
+.nav-links{
+    flex: 1;
+    text-align: left;
+}
+
+.social-links{
+    flex: 1;
+    text-align: right;
+}
+
+.social-links ul {
+    list-style: none;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+.social-links ul li .uil {
+    color: #ffffff;
+    font-size: 25px;
+    padding: 0 10px;
+    transition: .5s;
+}
+
+.social-links ul li .uil:hover {
+    color: var(--color-secondary);
+    font-size: 30px;
+}
+
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 20px;
+    position: relative;
+}
+.nav-links ul li a{
+    font-family: 'Akshar-SemiBold';
+    text-decoration: none;
+    font-size: 1.05rem;
+    color: #fff;
+}
+.nav-links ul li a::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: var(--color-secondary);;
+    display: block;
+    margin: auto;
+    transition: .5s;
+}
+.nav-links ul li a:hover::after{
+    width: 100%;
+}
+
+nav .uil.menu-taps{
+    display: none;
+}
+
+@media(max-width: 768px){
+    body {
+        overflow-x: hidden;
+    }
+
+    nav .uil.menu-taps{
+        display: block;
+        color: var(--color-secondary);
+        transition: .5s;
+    }
+
+    nav .uil.menu-taps:hover{
+        display: block;
+        color:#fff;
+        cursor: pointer;
+        font-size: 20px;
+    }
+
+    .nav-links{
+        position: absolute;
+        right: 0;
+        top: 62px;
+        background: rgba(37, 85, 124, .9);
+        transform: translateX(100%);
+        transition: transform .5s ease-in;
+    }
+
+    .nav-links ul{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links li{
+        opacity: 0;
+    }
+}
+
+.nav-active{
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    } to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
