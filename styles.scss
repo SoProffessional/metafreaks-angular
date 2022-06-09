@@ -1,0 +1,98 @@
+/* You can add global styles to this file, and also import other style files */
+:root{
+    --fs-xl: 6rem;
+    --fs-600: 2.5rem;
+    --fs-500: 1.8rem;
+    --fs-400: 0.98rem;
+
+    --color-main: #002644;
+    --color-secondary: #063F5D;
+}
+
+@media(max-width: 1200px){
+    :root{
+        --fs-xl: 3.8rem;
+        --fs-600: 2.15rem;
+        --fs-500: 1.725rem;
+        --fs-400: .9rem;
+    }
+}
+
+@media(max-width: 768px){
+    :root{
+        --fs-xl: 3.2rem;
+        --fs-600: 2.3rem;
+        --fs-500: 1.4rem;
+        --fs-400: 0.92rem;
+    }
+}
+
+@media(max-width: 400px){
+    :root{
+        --fs-500: 5.2vw;
+    }
+}
+
+*
+{
+    padding: 0px;
+    margin: 0px;
+}
+
+@font-face {
+    font-family: Akshar-Light;
+    src: url(assets/fonts/Akshar-Light.ttf) format('truetype');
+}
+@font-face {
+    font-family: Akshar-Regular;
+    src: url(assets/fonts/Akshar-Regular.ttf) format('truetype');
+}
+@font-face {
+    font-family: Akshar-Medium;
+    src: url(assets/fonts/Akshar-Medium.ttf) format('truetype');
+}
+@font-face {
+    font-family: Akshar-SemiBold;
+    src: url(assets/fonts/Akshar-SemiBold.ttf) format('truetype');
+}
+@font-face {
+    font-family: Akshar-Bold;
+    src: url(assets/fonts/Akshar-Bold.ttf) format('truetype');
+}
+
+html{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body { 
+    font-family: 'Akshar-Regular';
+    background-color: #000;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+p{
+    font-family: 'Akshar-Regular';
+}
+
+a{
+    color: #fff;
+}
+
+.btn{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 13px;
+    box-shadow: 5px 5px var(--color-secondary);
+    background: var(--color-main);
+    position: relative;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background: var(--color-secondary);
+    box-shadow: 5px 5px var(--color-main);
+    transition: 1s;
+}
