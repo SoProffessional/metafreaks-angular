@@ -12,18 +12,6 @@
     text-align: center;
 }
 
-.text-box h1{
-    font-size: var(--fs-xl);
-    padding: 20px 0 30px;
-    text-shadow: 0 .5px 0 #ccc, 0 1px 0 #ccc,
-                 0 1.5px 0 #ccc, 0 2px 0 #ccc,
-                 0 2.5px 0 #ccc, 0 3px 0 #ccc,
-                 0 3.5px 0 #ccc, 0 4px 0 #ccc,
-                 0 4.5px 0 #ccc, 0 5px 0 #ccc,
-                 0 5.5px 0 #ccc, 0 6px 0 #ccc,
-                 0 10px 15px rgba(0, 0, 0, 0.5);
-}
-
 .text-box .head{
     font-size: var(--fs-600);
 }
@@ -41,7 +29,7 @@
 header {
     min-height: 100vh;
     width: 100%;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.2),rgb(0, 0, 0)),url(./../../../assets/img/435928.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2),rgb(0, 0, 0)),url(https://raw.githubusercontent.com/SoProffessional/metafreaks-angular/main/src/assets/img/435928.jpg) !important;
     background-position: center;
     background-size: cover;
     position: relative;
@@ -64,30 +52,6 @@ header {
 
 .mint-btn:hover{
     cursor: pointer;
-}
-
-.fade-in{
-    opacity: 0;
-    transition: opacity 460ms ease-in;
-}
-.fade-in.appear{
-    opacity: 1;
-}
-.from-left{
-    transform: translateX(-50%);
-}
-.from-right{
-    transform: translateX(50%);
-}
-.from-left,
-.from-right{
-    transition: opacity 475ms ease-in, transform 500ms ease-in;
-    opacity: 0;
-}
-.from-left.appear,
-.from-right.appear{
-    transform: translateX(0);
-    opacity: 1;
 }
 
 section{
@@ -157,9 +121,12 @@ section#faqs {
     z-index: -2;
 }
 
-.pre-btn,
-.next-btn{
-    display: none;
+ul{
+    margin-top: 10px;
+}
+
+li{
+    text-align: left;
 }
 
 .road-slot-way{
@@ -330,6 +297,30 @@ h3.member-socials {
     background: var(--color-main);
 }
 
+.fade-in{
+    opacity: 0;
+    transition: opacity 460ms ease-in;
+}
+.fade-in.appear{
+    opacity: 1;
+}
+.from-left{
+    transform: translateX(-50%);
+}
+.from-right{
+    transform: translateX(50%);
+}
+.from-left,
+.from-right{
+    transition: opacity 475ms ease-in, transform 500ms ease-in;
+    opacity: 0;
+}
+.from-left.appear,
+.from-right.appear{
+    transform: translateX(0);
+    opacity: 1;
+}
+
 .contact-btn:hover {
     box-shadow: 3px 3px var(--color-main);
     background: var(--color-secondary);
@@ -394,12 +385,9 @@ p.the-team{
     margin: 10px 0;
 }
 
-ul{
-    margin-top: 10px;
-}
-
-li{
-    text-align: left;
+.pre-btn,
+.next-btn{
+    display: none;
 }
 
 @media(max-width: 990px){
